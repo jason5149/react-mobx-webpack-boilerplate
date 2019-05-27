@@ -26,7 +26,7 @@ module.exports = class extends Generator {
 
  writing() {
    const srcDir = path.resolve('app');
-   this.sourceDir(srcDir);
+   this.sourceRoot(srcDir);
 
    this.fs.copy(
      path.relative(srcDir, '**'),
