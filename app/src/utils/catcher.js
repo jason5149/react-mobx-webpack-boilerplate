@@ -7,7 +7,6 @@ export function HttpBizError(message, request) {
   this.name = 'HttpBizError';
   this.message = message;
   this.request = request;
-  // this.response = response;
 }
 
 HttpBizError.prototype = new Error;

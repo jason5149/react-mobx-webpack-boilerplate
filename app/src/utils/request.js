@@ -38,8 +38,6 @@ const responseHandler = (response) => {
 };
 
 const responseErrorHandler = (error) => {
-  console.log(error);
-
   stopLoading();
 
   Catcher(error.response, true);

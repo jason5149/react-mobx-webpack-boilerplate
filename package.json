@@ -1,6 +1,6 @@
 {
-  "name": "react-mobx-webpack-boilerplate",
-  "version": "1.0.0",
+  "name": "generator-react-mobx-webpack-boilerplate",
+  "version": "1.0.4",
   "description": "React-Mobx-Webpack-Boilerplate",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/jason5149/react-mobx-webpack-boilerplate.git"
   },
-  "keywords": ["yeoman-generator"],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "files": [
+    "app"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -18,6 +23,7 @@
   },
   "homepage": "https://github.com/jason5149/react-mobx-webpack-boilerplate#readme",
   "dependencies": {
+    "chalk": "^2.4.2",
     "yeoman-generator": "^4.0.0"
   }
 }
