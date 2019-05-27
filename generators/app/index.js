@@ -26,7 +26,7 @@ module.exports = class extends Generator {
  }
 
  writing() {
-   const srcDir = path.resolve(__dirname, '../app');
+   const srcDir = path.resolve(__dirname, '../../app');
    this.log(`srcDir: ${ srcDir }`);
    this.sourceRoot(srcDir);
 
