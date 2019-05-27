@@ -1,6 +1,6 @@
 {
   "name": "generator-react-mobx-boilerplate",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "React-Mobx-Boilerplate",
   "main": "index.js",
   "scripts": {
