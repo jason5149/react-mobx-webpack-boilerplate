@@ -1,5 +1,6 @@
 const Generator = require('yeoman-generator');
 const path = require('path');
+const chalk = require('chalk');
 
 module.exports = class extends Generator {
  prompting() {
@@ -25,11 +26,12 @@ module.exports = class extends Generator {
  }
 
  writing() {
-   const srcDir = path.resolve('app');
+   const srcDir = path.resolve(__dirname, '../app');
+   this.log(`srcDir: ${ srcDir }`);
    this.sourceRoot(srcDir);
 
    this.fs.copy(
-     path.relative(srcDir, '**'),
+     path.resolve(srcDir, '**'),
      this.destinationPath('./'),
      {
        globOptions: {
@@ -51,7 +53,7 @@ module.exports = class extends Generator {
 
          return contentStr
           .replace(/\{\{appName\}\}/g, appName)
-          .replace(/"version":.*/g, '"version": "1.0.0"')
+          .replace(/"version":.*/g, '"version": "1.0.0",')
        }
      }
    );
