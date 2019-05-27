@@ -1,6 +1,6 @@
 {
   "name": "generator-react-mobx-boilerplate",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "React-Mobx-Boilerplate",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,8 @@
     "yeoman-generator"
   ],
   "files": [
-    "app"
+    "app",
+    "generators"
   ],
   "author": "",
   "license": "ISC",
