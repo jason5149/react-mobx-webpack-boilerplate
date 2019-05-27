@@ -1,2 +1,2 @@
-# react-mobx-webpack-boilerplate
-React-Mobx-Webpack-Boilerplate
+# react-mobx-boilerplate
+React-Mobx-Boilerplate
