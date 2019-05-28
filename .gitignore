@@ -1,3 +1,6 @@
 app/node_modules/
 node_modules
 dist
+app/.Ds_Store
+app/src/.Ds_Store
+app/src/styles/components/.Ds_Store
