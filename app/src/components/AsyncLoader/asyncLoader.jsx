@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 /**
  * 按需加载组件
  */
-export default importComponent => {
+const AsyncLoader = importComponent => {
   class AsyncComponent extends Component {
     state = {
       component: null,
@@ -20,9 +20,11 @@ export default importComponent => {
     render() {
       const { component: C } = this.state;
 
-      return C ? <C { ...this.props } /> : null
+      return C ? <C {...this.props} /> : null
     }
   };
 
   return AsyncComponent;
 };
+
+export default AsyncLoader;

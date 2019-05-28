@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import AsyncLoader from '@components/AsyncLoader';
 import AuthRoute from '@components/AuthRoute';
-import { HttpBizError } from '@utils/catcher';
 
 class RouteConfig extends Component {
-
   /**
    * 渲染路由
    * @param {*} data 
@@ -25,7 +24,7 @@ class RouteConfig extends Component {
         const Component = AsyncLoader(component);
 
         return (
-          <Component key={ `${name}-layout` }>
+          <Component key={`${name}-layout`}>
             <Switch>
               {this.renderRoutes(children)}
             </Switch>
@@ -37,18 +36,18 @@ class RouteConfig extends Component {
             return (
               <AuthRoute
                 exact
-                key={ name }
-                path={ path }
-                render={ () => <Redirect to={ redirect } /> }
+                key={name}
+                path={path}
+                render={() => <Redirect to={redirect} />}
               />
             );
           } else {
             return (
               <Route
                 exact
-                key={ name }
-                path={ path }
-                render={ () => <Redirect to={ redirect } /> }
+                key={name}
+                path={path}
+                render={() => <Redirect to={redirect} />}
               />
             );
           }
@@ -57,18 +56,18 @@ class RouteConfig extends Component {
             return (
               <AuthRoute
                 exact
-                key={ name }
-                path={ path }
-                component={ AsyncLoader(component) }
+                key={name}
+                path={path}
+                component={AsyncLoader(component)}
               />
             );
           } else {
             return (
               <Route
                 exact
-                key={ name }
-                path={ path }
-                component={ AsyncLoader(component) }
+                key={name}
+                path={path}
+                component={AsyncLoader(component)}
               />
             );
           }
@@ -80,14 +79,16 @@ class RouteConfig extends Component {
   render() {
     const { data } = this.props;
 
-    if (!data || data.length <= 0) throw new HttpBizError('路由信息错误，请检查路由配置');
-
     return (
       <Switch>
         {this.renderRoutes(data)}
       </Switch>
     );
   }
+};
+
+RouteConfig.propTypes = {
+  data: PropTypes.ArrayOf(PropTypes.Object).isRequired,
 };
 
 export default RouteConfig;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { observable, action } from 'mobx';
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Icon } from 'antd';
 
 const { Header, Sider, Content } = Layout;
 
@@ -24,7 +25,7 @@ class App extends Component {
       <Sider
         trigger={null}
         collapsible
-        collapsed={ this.collapsed }
+        collapsed={this.collapsed}
       >
         <div className='logo' />  
       </Sider>
@@ -38,8 +39,8 @@ class App extends Component {
       >
         <Icon
           className='trigger'
-          type={ this.collapsed ? 'menu-unfold' : 'menu-fold' }
-          onClick={ this.handleToggle }
+          type={this.collapsed ? 'menu-unfold' : 'menu-fold'}
+          onClick={this.handleToggle}
         />
       </Header>
     );
@@ -73,6 +74,10 @@ class App extends Component {
       </Layout>
     );
   }
+};
+
+App.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default App;

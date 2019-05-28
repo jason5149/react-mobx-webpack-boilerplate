@@ -9,7 +9,7 @@ class Root extends Component {
     return (
       <ErrorBoundary>
         <Router>
-          <RouteConfig data={ routes }/>
+          <RouteConfig data={routes} />
         </Router>
       </ErrorBoundary>
     );

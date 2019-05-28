@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 class ErrorBoundary extends PureComponent {
   state = {
@@ -34,6 +35,10 @@ class ErrorBoundary extends PureComponent {
 
     return children;
   }
+};
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default ErrorBoundary;

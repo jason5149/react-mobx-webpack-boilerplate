@@ -8,7 +8,7 @@ import Root from './Root';
 
 const init = () => {
   render(
-    <Provider { ...stores }>
+    <Provider {...stores}>
       <Root />
     </Provider>,
     document.getElementById('root'),
