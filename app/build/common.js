@@ -29,7 +29,7 @@ const output = {
 const rules = [
   {
     test: /\.(js|jsx)$/,
-    use: ['babel-loader'],
+    use: ['babel-loader', 'babel-eslint'],
     include: [path.resolve('src')],
     exclude: [path.resolve('node_modules')],
   },
