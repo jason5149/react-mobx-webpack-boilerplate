@@ -88,7 +88,7 @@ class RouteConfig extends Component {
 };
 
 RouteConfig.propTypes = {
-  data: PropTypes.ArrayOf(PropTypes.Object).isRequired,
+  data: PropTypes.arrayOf(PropTypes.Object).isRequired,
 };
 
 export default RouteConfig;
