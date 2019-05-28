@@ -1,1 +1,0 @@
-{"source":"(window.webpackJsonp=window.webpackJsonp||[]).push([[\"bundle\"],[],[[2,\"runtime\",\"vendors\"]]]);"}

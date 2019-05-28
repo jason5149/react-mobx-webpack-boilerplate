@@ -1,0 +1,5 @@
+node_modules
+dist
+src/.Ds_Store
+src/styles/components/.Ds_Store
+.cache/
